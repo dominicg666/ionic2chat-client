@@ -1,0 +1,13 @@
+<ion-navbar *navbar>
+  <ion-title>
+    Home
+  </ion-title>
+</ion-navbar>
+
+<ion-content class="home">
+ <ion-list>
+     <ion-item *ngFor="#message of chats">{{message}}</ion-item>
+ </ion-list>
+  <ion-input type="text" [(ngModel)]="chatinp" placeholder="Enter a message"></ion-input>
+  <button fab (click)="send(chatinp)">Send</button>
+</ion-content>
